@@ -1,0 +1,113 @@
+.caianhchodep{
+	width: 100%;
+	height: 450px;
+}
+.anhchodep{
+	margin-left: -90px;
+	margin-right: -90px;
+}
+.rumb{
+	margin-top: 20px;
+	line-height: 1.4;
+	margin-bottom: 30px;
+}
+.rumb span{
+	font-size: 13px;
+    color: #888888;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+.rumb span a{
+	font-size: 13px;
+    color: #888888;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+.rumb i{
+	color: #888888;
+    font-size: 13px;
+    margin: 0 15px 0 19px;
+}
+
+.font{
+	font-size: 20px;
+	margin: 0 15px 0 19px;
+}
+.cainaylamain ul{
+	display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+}
+.cainaylamain ul li{
+	clear: both;
+	width: 100% !important;
+    margin-right: 0 !important;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+}
+.cainaylamain ul li .caianhtrongmain{
+	margin: 0;
+    width: 48.052%;
+	max-width: 370px;
+    float: left;
+    
+}
+.cainaylamain ul li .caianhtrongmain img{
+	 width: 100%;
+}
+.cainaylamain ul li .chuotrongli{
+	padding-left: 30px;
+	width: 51%;
+}
+.cainaylamain ul li .chuotrongli h2{
+	margin-top: 0;
+}
+.caiday{
+	color: #5a5d6fc9;
+}
+.caiday span{
+	padding-bottom: 10px;
+	border-bottom: 2px solid #71f242;
+}
+.chuduoi{
+	margin-top: 36px;
+}
+@media only screen and (max-width: 768px) and (min-width: 491px){
+	.anhchodep {
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}
+}
+@media only screen and (max-width: 1200px){
+	.anhchodep {
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}
+}
+@media only screen and (max-width: 490px){
+	.anhchodep {
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}
+	.cainaylamain ul li .caianhtrongmain {
+	    margin: 0;
+	    width: 100%;
+	    float: left;
+	}
+	.cainaylamain ul li .chuotrongli {
+		margin-top: 10px;
+	    padding-left: 30px;
+	    width: 100%;
+    }
+    .cainaylamain ul li {
+    	text-align: center;
+    	padding-inline-start: 15px;
+    }
+    .cainaylamain ul li .caianhtrongmain img {
+    	width: 100%;
+	}
+}

@@ -1,0 +1,114 @@
+.lst-items ul li.doansize{
+	max-width: 33.3%;
+}
+.chude{
+	width: 100%;
+	text-align: center;
+}
+.chude h2{
+	font-size: 26px;
+	font-weight: 700;
+	width: 100%;
+	color: #484646;
+}
+.chude span{
+	color: #888888;
+	font-weight: 400;
+}
+.chude span strong{
+	font-weight: 400;
+	color: black;
+}
+.chude>span.duongdoc:before{
+	content: "";
+	width: 0;
+	height: 10px;
+	margin: 0 15px;
+	display: inline-block;
+	background: none !important;
+	border-right: 1px solid;
+	opacity: 0.7;
+}
+.ctna{
+	float: left;
+	color: #f73da9d1;
+	padding: 8px 16px;
+	border: 1px solid #f73da9d1;
+	border-bottom: none;
+}
+.ctna span{
+	font-weight: 600;
+}
+.benright{
+	float: right;
+	color: #f73da9d1;
+	margin-top: 20px;
+}
+.benright span{
+	font-weight: 400;
+	font-size: 16px;
+}
+.benright button{
+	outline: none;
+	background: none;
+	border: none;
+}
+.chutrongtt ul{
+	margin-top: 10px;
+}
+.chutrongtt ul li{
+	font-family: 'Dancing Script', cursive;
+	font-size: 20px;
+}
+.chutrongtt ul li i{
+	margin-right: 20px;
+	color: #ef5ed4;
+}
+.chutrongtt h1{
+	font-family: 'Montaga', serif;
+	color: #ef5ed4;
+}
+.belenba li{
+	list-style-type: square;
+}
+.luy h3{
+	font-size: 20px;
+	color: #888;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.caia{
+	width: 100%;
+	display: block;
+	height: auto;
+}
+.caia a{
+	padding: 4px 16px;
+	border: 1px solid#ddd;
+	margin-top: 10px;
+	display: inline-block;
+	color: #888;
+	background: none;
+	margin: 4px;
+	margin-bottom: 4px;
+	outline: none;
+	font-weight: normal;
+	line-height: 1.2;
+	border-radius: 5px;
+}
+.caianhtrongtt img{
+	width: 100%;
+}
+.caibor{
+	color: black;
+	border: none;
+}
+.caibor .txt-blk span{
+	font-weight: 300;
+}
+@media only screen and (max-width: 490px){
+	.lst-items ul li.doansize{
+	max-width: 100%;
+}
+}
