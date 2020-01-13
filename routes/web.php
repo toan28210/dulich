@@ -33,9 +33,9 @@ Route::group(['prefix'=> 'admin'],function(){
     Route::get('updatedd/{id}','DiadiemController@edit');
     Route::post('updd/{id}','DiadiemController@update');
 });
-
+    
 Route::group(['prefix'=> 'client'],function(){
-    Route::get('/','HomePageController@getIndex');
+    Route::get('/','HomePageController@getIndex'); //Link den trang chu
     Route::get('chitiet/{id}','HomePageController@getDetail');
     Route::post('dem','HomePageController@dem');
     Route::post('comment','BinhluanController@comment');
@@ -45,6 +45,7 @@ Route::group(['prefix'=> 'client'],function(){
     Route::get('searchtour','HomePageController@getSearchTour');
     Route::get('seahotel','HomePageController@getSearchHotel');
     Route::get('contact','HomePageController@getcontact');
+    Route::get('introduct','HomePageController@getintro');
 });
 
 

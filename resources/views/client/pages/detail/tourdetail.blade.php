@@ -3,7 +3,7 @@
 	<div class="container-fluid" style="background: #ddd; height: 50px; margin-top: -19px">
 		<div class="container rumb">
 				<span>
-					<a href="file:///D:/Web/Webcuoiky/text/slider.html">Trang chủ</a>
+					<a href="/client/">Trang chủ</a>
 				</span>
 				<i class="fas fa-angle-right"></i>
 				<span>Thông tin
@@ -56,6 +56,7 @@
 				<div class="col-sm-8">
 					{!! $tour->mota !!}
 					<div><i class="far fa-eye"></i> {{ $tour->soluotxem }} lượt xem</div>
+					<input type="hidden" name="id" id="id" value="{{ $tour->id }}">
 					<input type="hidden" name="soluotxem" id="soluotxem" value="{{ $tour->soluotxem + 1 }}">
 					<script src="acsset/client/js/xem.js"></script>
 					
@@ -64,6 +65,10 @@
 							<h3>Bình luận</h3>
 							<form id="form-comment">
 								<input type="hidden" value="{{ $tour->id }}" name="idTour" id="idTour">
+								<div class="form-group">
+									<label for="comment">Bình luận:</label>
+									<textarea class="form-control content" rows="5" id="con_comment" name="con_comment"></textarea>
+								  </div>
 							<div class="form-group">
 								<label for="usr">Email:</label>
 								<input type="text" class="form-control email" id="email" name="email">
@@ -71,10 +76,6 @@
 							  <div class="form-group">
 								<label for="pwd">Tên hiển thị:</label>
 								<input type="text" class="form-control name" id="name" name="name">
-							  </div>
-							  <div class="form-group">
-								<label for="comment">Bình luận:</label>
-								<textarea class="form-control content" rows="5" id="con_comment" name="con_comment"></textarea>
 							  </div>
 								  <input class="btn btn-warning guicomment" id="submit" name="submit" type="button" value="Gửi">
 								  <div id="erorr"></div>
@@ -92,7 +93,11 @@
 										<div class="journalsummary" style="padding:5px;border:1px solid #d8d8d8;position:relative;">
 											<i style="position:absolute; top:5px;left:-7px; font-size:20px;line-height: 11px;background-color:#fff; color: #d8d8d8;" class="fa fa-angle-left"></i>
 											<span style="font-weight:700;color:#03f;font-size:13px;" class="authorname">{{ $comment->name }}</span>
+											@if(Auth::check())
 											<span style="background:none; border:1px solid #209cee;color:#209cee;font-size: 11px;font-weight: 400;margin-left: 5px;padding: 1px 4px;border-radius: 3px;" class="member">Thành viên</span>
+											@else
+											<span style="background:none; border:1px solid #999;;color:##999;font-size: 11px;font-weight: 400;margin-left: 5px;padding: 1px 4px;border-radius: 3px;" class="member">Ẩn danh</span>
+											@endif
 											<abbr title="">
 												<i class="fa fa-clock-o">{{ $comment->created_at }}</i> 
 											</abbr>
@@ -173,67 +178,20 @@
 								<div id="moi" class="tabcontent" style="display: block; border: 1px solid #ddd;border-top: none;">
 								    <div class="tab-pane">
 										<ul>
+											@foreach($new as $new)
 											<li>
 												<a href="#">
-													<img src="https://media.foody.vn/res/g10/92558/prof/s1242x600/foody-mobile-bia-jpg.jpg">
+													<img src="{{$new->thumbnail}}">
 												</a>
 												<div class="tab-text">
-													<span>Top Beer - Beer Club</span>
+													<span>{{$new->title}}</span>
 													<ul style="display: flex;">
-														<li><span>16/05/2019</span></li>
+														<li><span>{{$new->created_at}}</span></li>
 														<li><span>0 COMMENT</span></li>
 													</ul>
 												</div>
 											</li>
-											<li>
-												<a href="#">
-													<img src="https://media.foody.vn/res/g10/92558/prof/s1242x600/foody-mobile-bia-jpg.jpg">
-												</a>
-												<div class="tab-text">
-													<span>Top Beer - Beer Club</span>
-													<ul style="display: flex;">
-														<li><span>16/05/2019</span></li>
-														<li><span>0 COMMENT</span></li>
-													</ul>
-												</div>
-											</li>
-											<li>
-												<a href="#">
-													<img src="https://media.foody.vn/res/g10/92558/prof/s1242x600/foody-mobile-bia-jpg.jpg">
-												</a>
-												<div class="tab-text">
-													<span>Top Beer - Beer Club</span>
-													<ul style="display: flex;">
-														<li><span>16/05/2019</span></li>
-														<li><span>0 COMMENT</span></li>
-													</ul>
-												</div>
-											</li>
-											<li>
-												<a href="#">
-													<img src="https://media.foody.vn/res/g10/92558/prof/s1242x600/foody-mobile-bia-jpg.jpg">
-												</a>
-												<div class="tab-text">
-													<span>Top Beer - Beer Club</span>
-													<ul style="display: flex;">
-														<li><span>16/05/2019</span></li>
-														<li><span>0 COMMENT</span></li>
-													</ul>
-												</div>
-											</li>
-											<li>
-												<a href="#">
-													<img src="https://www.baodanang.vn/dataimages/201905/original/images1514513_61542064_1238975226268312_5417679667094093824_n.jpg">
-												</a>
-												<div class="tab-text">
-													<span>Lễ hội pháo hoa</span>
-													<ul style="display: flex;">
-														<li><span>16/05/2019</span></li>
-														<li><span>0 COMMENT</span></li>
-													</ul>
-												</div>
-											</li>
-
+											@endforeach
 										</ul>
 									</div>
 								</div>

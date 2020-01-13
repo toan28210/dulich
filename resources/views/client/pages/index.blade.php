@@ -1,5 +1,5 @@
 @extends('client.layouts.master')
-@section('content')
+@section('content') 
 <div id="form-search">
     <div class="form-ifo-search">
         <form action="{{ asset('client/search/') }}" method="get">
@@ -8,6 +8,14 @@
                     <div class="col-xs-12">
                         <div class="pad-tb">
                             <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-md btn-search btn-mg-t">
+                                            <i class="fas fa-search"></i>
+                                            &nbsp;&nbsp;Tìm kiếm
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
                                     <div class="form-group">
                                         <label class="lb">Nơi khởi hành</label>
@@ -30,6 +38,7 @@
                                         </select>
                                     </div>
                                 </div>
+                                
                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
                                     <div class="form-group">
                                         <label class="lb">Ngày khởi hành</label>
@@ -59,14 +68,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-md btn-search btn-mg-t">
-                                            <i class="fas fa-search"></i>
-                                            &nbsp;&nbsp;Tìm kiếm
-                                        </button>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

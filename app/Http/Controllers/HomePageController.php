@@ -12,6 +12,7 @@ use Carbon;
 
 class HomePageController extends Controller
 {
+    //ddaay Controller hien thi trang chu
     public function getIndex(){
         $tour = Tour::paginate(5);
         $hotel = Hotel::paginate(5);
@@ -28,8 +29,9 @@ class HomePageController extends Controller
         $dd = Diadiem::all();
         $dd2 = Diadiem::paginate(10);
         $yt_tour = Tour::orderBy('soluotxem')->paginate(5);
+        $new = News::paginate(4);
         $comment = Binhluan::where('idTour',$id)->orderBy("created_at", 'desc')->paginate(10);
-        return view('client.pages.detail.tourdetail',compact('tour','hotel','dd','dd2','yt_tour','comment'));
+        return view('client.pages.detail.tourdetail',compact('tour','hotel','dd','dd2','yt_tour','comment','new'));
     }
     public function dem(Request $req){
         $id = $req->id;
@@ -136,5 +138,9 @@ class HomePageController extends Controller
     public function getcontact(){
         $new = News::paginate(5);
         return view('client.pages.contact',compact('new'));
+    }
+    public function getintro(){
+        $new = News::paginate(4);
+        return view('client.pages.introduct',compact('new'));
     }
 }

@@ -4,7 +4,7 @@
 	<div class="container-fluid" style="background: #ddd; height: 50px; margin-top: -19px">
 		<div class="container rumb">
 				<span>
-					<a href="file:///D:/Web/Webcuoiky/text/slider.html">Trang chủ</a>
+					<a href="/client">Trang chủ</a>
 				</span>
 				<i class="fas fa-angle-right"></i>
 				<span>Tour du lịch

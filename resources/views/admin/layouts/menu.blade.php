@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="/admin">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Trang Chủ</span></a>
     </li>
@@ -78,6 +78,9 @@
             <a class="collapse-item" href="{{ route('customer.index') }}">Danh sách</a>
             </div>
         </div>
+        </li>
+        <li class="nav-item">
+            <a href="/client/">Client</a>
         </li>
     <!-- end menu product -->
 
